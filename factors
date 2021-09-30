@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+from sys import argv
+factorize = __import__("0-fac").factorize
+
+b = argv[1]
+with open(b) as f1:
+    while True:
+        c = f1.readline()
+        if not c:
+            break
+        a = factorize(int(c))
+        print("{:.0f} * {} = {}".format(a[0], a[1], c))
